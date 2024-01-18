@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-con">
+            <div class="navbar">
+                <div class="logo">
+                    Pulse.
+                </div>
+                <ul>
+                    <li id="h">Home</li>
+                    <li>News</li>
+                    <li>Favorite</li>
+                    <li>Add</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="p">
+                    <p id="or">Reservations </p>
+                    <p><i class="bi bi-telephone-fill"></i> 652-345 3222 11</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="menu">
+        <div class="container">
+            <div class="m-all">
+                <div class="m-head">
+                    <div class="icon">
+                        <i class="bi bi-android2"></i>
+                    </div>
+                    <div class="line">
+                        <h2>ADD</h2>
+                    </div>
+                </div>
+                <div class="m-divs">
+                    <form action="" id="form">
+                        <label for="">Name:</label>
+                        <input type="text" id="name">
+                        <label for="">Des:</label>
+                        <input type="text" id="des">
+                        <label for="">Price:</label>
+                        <input type="number" id="price">
+                        <input type="submit" id="submit">
+                    </form>
+
+                    <div class="xeta"></div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id:</th>
+                                <th>Name:</th>
+                                <th>Des:</th>
+                                <th>Price:</th>
+                                <th>Delete</th>
+                            </tr>
+
+                        
+
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/script/add.js"></script>
+</body>
+
+</html>
