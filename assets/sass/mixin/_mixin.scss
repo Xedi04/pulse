@@ -1,0 +1,39 @@
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mini{
+    width: 100%;
+    @include flex;
+}
+
+@mixin column{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@mixin head{
+    font-size: 50px;
+    font-weight: 200;
+    position: relative;
+    @include flex;
+    &::after{
+        content: "";
+        position: absolute;
+        left: -270px;
+        width: 250px;
+        height: 1px;
+        background-color: rgb(230, 205, 175);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        right: -270px;
+        width: 250px;
+        height: 1px;
+        background-color: rgb(230, 205, 175);
+    }
+}

@@ -1,0 +1,336 @@
+@import "./variables";
+@import "./mixin/mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 32px;
+    margin: auto;
+}
+body{
+ font-family:'Rubik', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid gray;
+
+    .nav-con {
+        max-width: 1300px;
+        width: 100%;
+        padding: 0 32px;
+        margin: auto;
+
+        .navbar {
+            @include mini;
+            justify-content: space-between;
+            color: white;
+            padding: 30px 0;
+
+
+            .logo {
+                font-size: 37px;
+            }
+
+            ul {
+                list-style: none;
+                @include flex;
+                gap: 30px;
+
+                li {
+                    font-size: 15px;
+                    font-weight: 700;
+                    transition: all .5s ease;
+                    cursor: pointer;
+                    &:hover{
+                        color: $or;
+                    }
+                }
+                #h{
+                    color: $or;
+                }
+            }
+
+            .p{
+                @include flex;
+                gap: 5px;
+                p{
+                    font-size: 15px;
+                    font-weight: 800;
+                }
+                #or{
+                    color: $or;
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    width: 100%;
+    background-image: url("../images/slider-2.jpg");
+    background-position: center;
+    background-size: cover;
+    .b-all{
+        @include mini;
+        justify-content: space-between;
+        padding: 300px 0;
+        .number{
+            border: 1px solid gray;
+            @include flex;
+            flex-direction: column;
+            gap: 20px;
+            padding:  30px 20px;
+            p{
+                font-size: 20px;
+                font-weight: 800;
+                color: white;
+            }
+            #bir{
+                color: $or;
+            }
+        }
+        .b-head{
+            width: 97%;
+            @include flex;
+            flex-direction: column;
+            color: white;
+            gap: 3px;
+        
+            h1{
+                font-size: 100px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 17px;
+                font-weight: 800;
+            }
+        }
+        
+    }
+}
+
+
+.welcome{
+    width: 100%;
+    .w-all{
+        @include mini;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+        .w-head{
+            @include mini;
+            flex-direction: column;
+            gap: 20px;
+            .icon{
+                i{
+                    font-size: 70px;
+                    color: rgb(201, 194, 132);
+                }
+            }
+            .line{
+                @include mini;
+                h2{
+          @include head;
+                }
+
+            }
+        }
+        .w-divs{
+            @include mini;
+            justify-content: space-between;
+            .div3{
+                width: 32%;
+                @include flex;
+                text-align: center;
+                flex-direction: column;
+                gap: 30px;
+                h3{
+                    font-size: 30px;
+                    font-weight: 300;
+                }
+                p{
+                    color: gray;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.test{
+    width: 100%;
+    background-image: url("../images/slider-2.jpg");
+    background-position: center;
+    background-size: cover;
+    .t-all{
+        @include mini;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+        .t-head{
+            @include mini;
+            flex-direction: column;
+            gap: 20px;
+            .icon{
+                i{
+                    font-size: 50px;
+                    color: white;
+                }
+            }
+            .line{
+                h2{
+                    @include head;
+                    color: white;
+                }
+            }
+
+        }
+        .t-divs{
+            @include mini;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 50px;
+            color: white;
+            p{
+                @include flex;
+                gap: 5px;
+                span{
+                    color: $or;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    nav{
+        .nav-con{
+            max-width: 880px;
+            .navbar{
+                .p{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .banner{
+        .container{
+            max-width: 900px;
+            .b-all{
+                .b-head{
+                    h1{
+                        font-size: 70px;
+                    }
+                }
+            }
+        }
+    }
+
+    .welcome{
+        .container{
+            max-width: 800px;
+            .w-head{
+                .line{
+                    h2{
+                        &::after{
+                            left: -120px;
+                            width: 100px;
+                        }
+                        &::before{
+                            right: -120px;
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav{
+        .nav-con{
+            .navbar{
+                ul{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .banner{
+        .container{
+            .b-all{
+                padding: 250px 0;
+                .number{
+                    display: none;
+                }
+                .b-head{
+                    h1{
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    .welcome{
+        .container{
+            max-width: 550px;
+            .w-all{
+                .w-divs{
+                    flex-direction: column;
+                    gap: 30px;
+                    .div3{
+                        width: 100%;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (max-width:576px) {
+    
+    .welcome{
+        .container{
+            padding: 0 10px;
+            .w-all{
+                .w-head{
+                    .line{
+                        h2{
+                            font-size: 30px;
+                            &::after{
+                                
+                                width: 0;
+                            }
+                            &::before{
+                                
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+                .w-divs{
+                    .div3{
+                        padding: 0;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
